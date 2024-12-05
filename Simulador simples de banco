@@ -1,0 +1,47 @@
+Scanner scanner = new Scanner(System.in);  
+        double saldo = 0.0;  
+        int opcao;  
+
+        String escolha = null;
+		do {  
+            System.out.println("\nMenu:");  
+            System.out.println("a) Consulta saldo");  
+            System.out.println("b) Saque");  
+            System.out.println("c) Depósito");  
+            System.out.println("d) Sair");  
+            System.out.print("Escolha uma opção: ");  
+            String escolha1 = scanner.next();  
+
+            switch (escolha1.toLowerCase()) {  
+                case "a":  
+                    System.out.printf("Saldo atual: R$ %.2f%n", saldo);  
+                    break;  
+                case "b":  
+                    System.out.print("Digite o valor do saque: R$ ");  
+                    double valorSaque = scanner.nextDouble();  
+                    if (valorSaque <= saldo && valorSaque > 0) {  
+                        saldo -= valorSaque;  
+                        System.out.printf("Saque de R$ %.2f realizado com sucesso.%n", valorSaque);  
+                    } else {  
+                        System.out.println("Saldo insuficiente ou valor inválido.");  
+                    }  
+                    break;  
+                case "c":  
+                    System.out.print("Digite o valor do depósito: R$ ");  
+                    double valorDeposito = scanner.nextDouble();  
+                    if (valorDeposito > 0) {  
+                        saldo += valorDeposito;  
+                        System.out.printf("Depósito de R$ %.2f realizado com sucesso.%n", valorDeposito);  
+                    } else {  
+                        System.out.println("Valor inválido para depósito.");  
+                    }  
+                    break;  
+                case "d":  
+                    System.out.println("Saindo do sistema...");  
+                    break;  
+                default:  
+                    System.out.println("Opção inválida. Tente novamente.");  
+            }  
+        } while (!"d".equalsIgnoreCase(escolha));  
+
+        scanner.close(); 
