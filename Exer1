@@ -1,0 +1,21 @@
+import java.util.Scanner;
+
+public class Exer1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		float a;
+		int x=0,somaN=0;
+		Scanner leia = new Scanner(System.in);
+		
+		for(x=1;x<=5;x++) {
+			System.out.println("\nQual o valor da variável? ");
+			a = leia.nextFloat();
+			if(a<0) {
+				somaN++;
+			}
+		}
+		System.out.println("\nNúmeros negativos: "+somaN);
+	}
+}
