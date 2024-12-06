@@ -1,0 +1,14 @@
+public class Exer6 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		int x,tabux;
+		for(x=1;x<=10;x++) {
+			tabux=8*x;
+			System.out.println("\nTabuada do 8*"+x+" = "+tabux);
+		}
+
+	}
+
+}
