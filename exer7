@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+public class Exer7 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		int x,y,tabuy;
+		Scanner leia = new Scanner(System.in);
+		System.out.println("\nEntre com o valor da tabuada: ");
+		y=leia.nextInt();
+		for(x=1;x<=10;x++){
+			tabuy=y*x;
+		System.out.println("\nTabuada do "+y+"*"+x+" = "+tabuy);
+		}
+
+	}
+
+}
