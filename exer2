@@ -1,0 +1,37 @@
+import java.util.Scanner;
+
+public class Exer2 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		float s,somas=0,meds,medf,maiors=0,por,s100=0;
+		int nf,somaf=0,x=0;
+		Scanner leia=new Scanner(System.in);
+		
+		for(x=1;x<=4;x++) {
+			System.out.println("\nValor de salário: ");
+			s=leia.nextFloat();
+			System.out.println("\nQuantidade de filhos: ");
+			nf=leia.nextInt();
+			
+			somas+=s;
+			somaf+=nf;
+			if(s<=100) {
+				s100++;
+			}
+			if(maiors<s) {
+				maiors=s;
+			}
+		}
+		
+		meds=somas/4;
+		medf=somaf/4;
+		por=(s100*100)/4;
+		
+		System.out.println("\nMédia salarial: "+meds);
+		System.out.println("\nMédia de filhos: "+medf);
+		System.out.println("\nPorcentagem de individuos com salario menor ou igual a 100 reias: "+por);
+		System.out.println("\nMaior salário: "+maiors);
+	}
+}
