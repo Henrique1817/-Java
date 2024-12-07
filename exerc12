@@ -1,0 +1,68 @@
+import java.util.Scanner;
+
+public class Exer12 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		float n1,n2,n3,medFa=0,soman=0,maior=0,menor=100,medF,somanF=0;
+		int x,matri,naula,contna=0,contalr=0;
+		Scanner leia=new Scanner(System.in);
+		System.out.println("----------------START----------------");
+		for(x=1;x<=2;x++) {
+			System.out.println("\nDigite a matrícula do aluno(a): ");
+			matri=leia.nextInt();
+			System.out.println("Digite a N1: ");
+			n1=leia.nextFloat();
+			System.out.println("Digite a N2: ");
+			n2=leia.nextFloat();
+			System.out.println("Digite a N3: ");
+			n3=leia.nextFloat();
+			System.out.println("Digite a frequência do aluno(a): ");
+			naula=leia.nextInt();
+			soman=n1+n2+n3;
+			somanF+=soman;
+			medFa=soman/3;
+			
+			System.out.println("\nMédia final: "+medFa);
+			
+			contna++;
+			
+			if(n1>maior) {
+				maior=n1;
+			}if(n2>maior) {
+				maior=n2;
+			}if(n3>maior) {
+				maior=n3;
+			}
+			 if(n1<menor) {
+				menor=n1;
+			}if(n2<menor) {
+				menor=n2;
+			}if(n3<menor) {
+				menor=n3;
+			}
+			 if(naula>=40 && medFa>=60) {
+				 System.out.println("Aluno(a) aprovado(a)");
+				 System.out.println("-------------------------------------");
+			 }else {
+				 System.out.println("Aluno(a) reprovado(a)");
+				 System.out.println("-------------------------------------");
+				 contalr++;
+			 }
+		}
+		medF=somanF/3;
+		System.out.println("\nQuantidade de alunos: "+contna);
+		System.out.println("--------------------------------");
+		System.out.println("Maior nota: "+maior);
+		System.out.println("--------------------------------");
+		System.out.println("Menor nota: "+menor);
+		System.out.println("--------------------------------");
+		System.out.println("Média da sala: "+medF);
+		System.out.println("--------------------------------");
+		System.out.println("Quantidade de alunos reprovados: "+contalr);
+		System.out.println("----------------END---------------");
+
+	}
+
+}
