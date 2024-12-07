@@ -1,0 +1,37 @@
+public class Exer10 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		int x;
+		System.out.println("-----------START------------");
+		System.out.println("\tMúltiplos de 2= ");
+		for(x=1;x<=100;x++) {
+			if(x%2==0) {
+				System.out.println("\t\t\t= "+x);
+			}
+		}
+		System.out.println("-------------------------");
+		System.out.println("\tMúltiplos de 3 = ");
+		for(x=1;x<=100;x++) {
+			if(x%3==0) {
+				System.out.println("\t\t\t= "+x);
+			}
+		}
+		System.out.println("-------------------------");
+		System.out.println("\tMúltiplos de 5 = ");
+		for(x=1;x<=100;x++) {
+			if(x%5==0) {
+				System.out.println("\t\t\t= "+x);
+			}
+		}
+		System.out.println("-----------------------------------------");
+		System.out.println("Múltiplos de 2,3 e 5 simultâneamente = ");
+		for(x=1;x<=100;x++) {
+			if(x%2==0 && x%3==0 && x%5==0) {
+				System.out.println("\t\t\t="+x);
+			}
+		}
+		System.out.println("-------------------END-------------------");	 
+	}
+}
