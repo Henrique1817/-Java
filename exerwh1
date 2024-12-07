@@ -1,0 +1,67 @@
+import java.util.Scanner;
+
+public class exerWhile1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		int cont1=0,cont2=0,op=0,cont3=0,cont4=0,cont5=0,venc=0;
+		float por4=1,por5=1,contop=0;
+		Scanner leia=new Scanner(System.in);
+		System.out.println("Escolha uma das opções abaixo.");
+		System.out.println("\n1-Jair Messias Bolsonaro.");
+		System.out.println("\n2-Arthur Souza.");
+		System.out.println("\n3-Felipe Lima.");
+		System.out.println("\n4-Nulo.");
+		System.out.println("\n5-Branco.");
+		op=leia.nextInt();
+		
+		while(op!=6) {
+			switch(op) {
+			
+			case 1:
+				cont1++;
+				break;
+                        case 2:
+				cont2++;
+				break;
+                        case 3:
+		     	        cont3++;
+				break;
+                        case 4:
+				cont4++;
+				break;
+                        case 5:
+				cont5++;
+				break;
+				
+			}
+			if(op<1 || op>=6) {
+			   System.out.println("\nNúmero invalido, digite novamente.");
+			}else {
+				contop++;
+			}
+			System.out.println("\nEscolha uma das opções abaixo.");
+			System.out.println("\n1-Jair Messias Bolsonaro.");
+			System.out.println("\n2-Arthur Souza.");
+			System.out.println("\n3-Felipe Lima.");
+			System.out.println("\n4-Nulo.");
+			System.out.println("\n5-Branco.");
+			op=leia.nextInt();
+		}
+		if(cont1>cont2 && cont1>cont3) {
+			System.out.println("Jair Messias Bolsonaro é o candidato vencedor");
+		}else if(cont2>cont1 && cont2>cont3) {
+			System.out.println("Arthur Souza é o candidato vencedor");
+		}else{
+			System.out.println("Felipe Lima é o candidato vencedor");
+		}
+		por4=cont4/contop;
+		por5=cont5/contop;
+		System.out.println("\nVotos do Candidato 1: "+cont1);
+		System.out.println("\nVotos do Candidato 2: "+cont2);
+		System.out.println("\nVotos do Candidato 3: "+cont3);
+        System.out.println("\nPorcentagem de votos nulos: "+por4);
+        System.out.println("\nPorcentagem de votos Brancos: "+por5);
+	}
+}
